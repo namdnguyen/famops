@@ -245,7 +245,7 @@ files = [
 
 [[package]]
 name = "dagster"
-version = "1.6.9"
+version = "1.6.11"
 requires_python = ">=3.8,<3.13"
 summary = "Dagster is an orchestration platform for the development, production, and observation of data assets."
 groups = ["default"]
@@ -256,7 +256,7 @@ dependencies = [
     "click>=5.0",
     "coloredlogs<=14.0,>=6.1",
     "croniter>=0.3.34",
-    "dagster-pipes==1.6.9",
+    "dagster-pipes==1.6.11",
     "docstring-parser",
     "grpcio-health-checking>=1.44.0",
     "grpcio>=1.44.0",
@@ -283,19 +283,19 @@ dependencies = [
     "watchdog>=0.8.3",
 ]
 files = [
-    {file = "dagster-1.6.9-py3-none-any.whl", hash = "sha256:797ea3ea7cefbb9088f56866b9fe3a3530edf02f271c1259244ef7e48d7621ec"},
-    {file = "dagster-1.6.9.tar.gz", hash = "sha256:966727b14f94c0a34e0e0ba03be79f3d69bc348a00e0a9c545a383593143ffa0"},
+    {file = "dagster-1.6.11-py3-none-any.whl", hash = "sha256:78324d699e80fc9d24727c32447835f3d8c19cf14a10b84e7c0e12c4f76d8115"},
+    {file = "dagster-1.6.11.tar.gz", hash = "sha256:a1da964ad4f3804e2830ef9f2b12cfc00d3ad52c3b5c75ca87ac8e88e7b46de5"},
 ]
 
 [[package]]
 name = "dagster-dbt"
-version = "0.22.9"
+version = "0.22.11"
 requires_python = ">=3.8,<3.13"
 summary = "A Dagster integration for dbt"
 groups = ["default"]
 dependencies = [
     "Jinja2",
-    "dagster==1.6.9",
+    "dagster==1.6.11",
     "dbt-core<1.8,>=1.5",
     "networkx",
     "orjson",
@@ -305,24 +305,24 @@ dependencies = [
     "typer>=0.9.0",
 ]
 files = [
-    {file = "dagster-dbt-0.22.9.tar.gz", hash = "sha256:6d1f6c13f71b931ef4e34fdf8262360e412aaaab48cea100d31a1717be214ca4"},
-    {file = "dagster_dbt-0.22.9-py3-none-any.whl", hash = "sha256:b29911d937fa77db9a8fed109aa504c7db90138c8073171355b01317719d6fa8"},
+    {file = "dagster-dbt-0.22.11.tar.gz", hash = "sha256:8d109b93a934532b75dec8a37eac784774f03648c020a18a2a6792ae99726035"},
+    {file = "dagster_dbt-0.22.11-py3-none-any.whl", hash = "sha256:67098bd932047b8086767a0a1d8e7de3b24a4a45f9203a37866294b745661d2f"},
 ]
 
 [[package]]
 name = "dagster-pipes"
-version = "1.6.9"
+version = "1.6.11"
 requires_python = ">=3.8,<3.13"
 summary = "Toolkit for Dagster integrations with transform logic outside of Dagster"
 groups = ["default"]
 files = [
-    {file = "dagster-pipes-1.6.9.tar.gz", hash = "sha256:c0f905e89613d570155403884eb76808bc3fb2df67ccd9d85624f98029e08801"},
-    {file = "dagster_pipes-1.6.9-py3-none-any.whl", hash = "sha256:dce024f4e3df9d342f10a5491794a6716fa5dddd018af083f80409b4c505ed1f"},
+    {file = "dagster-pipes-1.6.11.tar.gz", hash = "sha256:fbcdda55d32413e741519c216bba2956ed19159568d30e24db7bdfa4c988e6fa"},
+    {file = "dagster_pipes-1.6.11-py3-none-any.whl", hash = "sha256:21097de0461a003687e45e7cff0c10502ade0d7a4706d5e7aaca786a355f1772"},
 ]
 
 [[package]]
 name = "dbt"
-version = "1.0.0.36.9"
+version = "1.0.0.36.13"
 requires_python = ">=3.8"
 summary = "The dbt Cloud CLI - an ELT tool for running SQL transformations and data models in dbt Cloud.\t"
 groups = ["default"]
@@ -330,7 +330,7 @@ dependencies = [
     "setuptools>=61.2",
 ]
 files = [
-    {file = "dbt-1.0.0.36.9.tar.gz", hash = "sha256:70114ab0930d2f9b0f6f394b94c4a8b91291c3f117f98b758a66087ec6b0bb4b"},
+    {file = "dbt-1.0.0.36.13.tar.gz", hash = "sha256:b7edf2026d5257f7b41a3bbb5351677211112dbd58d99ddb6c5a59b178f8dcc6"},
 ]
 
 [[package]]
