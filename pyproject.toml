@@ -12,6 +12,9 @@ dependencies = [
     "dbt>=1.0.0.36.9",
     "duckdb>=0.10.0",
     "dbt-duckdb>=1.7.3",
+    "dlt[duckdb]>=0.4.3a0",
+    "openpyxl>=3.0.0",
+    "streamlit>=1.32.2",
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
@@ -20,3 +23,7 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
