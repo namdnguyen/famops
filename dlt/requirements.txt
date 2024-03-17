@@ -1,2 +1,0 @@
-dlt[duckdb]>=0.4.3a0
-openpyxl>=3.0.0
