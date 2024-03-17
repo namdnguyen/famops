@@ -1,4 +1,5 @@
 """Reads files in s3, gs or azure buckets using fsspec and provides convenience resources for chunked reading of various file formats"""
+
 from typing import Iterator, List, Optional, Tuple, Union
 
 import dlt

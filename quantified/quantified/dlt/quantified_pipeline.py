@@ -1,18 +1,10 @@
-import os
-import posixpath
-from typing import Iterator
-
 import dlt
-from dlt.sources import TDataItems
 
 try:
     from .filesystem import FileItemDict, filesystem, readers, read_csv  # type: ignore
 except ImportError:
     from filesystem import (
-        FileItemDict,
-        filesystem,
         readers,
-        read_csv,
     )
 
 
@@ -24,13 +16,13 @@ def read_csv_with_duckdb() -> None:
     )
 
     # load all the CSV data, excluding headers
-    quantified_files = readers(
-        file_glob="*.csv"
-    ).read_csv_duckdb(chunk_size=5000, header=True)
+    quantified_files = readers(file_glob="*.csv").read_csv_duckdb(
+        chunk_size=5000, header=True
+    )
 
-    load_info = pipeline.run(quantified_files,
-                             table_name = "quantified",
-                             write_disposition = "replace")
+    load_info = pipeline.run(
+        quantified_files, table_name="quantified", write_disposition="replace"
+    )
 
     print(load_info)
     print(pipeline.last_trace.last_normalize_info)

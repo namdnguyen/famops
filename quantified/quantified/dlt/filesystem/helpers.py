@@ -1,5 +1,6 @@
 """Helpers for the filesystem resource."""
-from typing import TYPE_CHECKING, Any, Dict, Iterable, List, Optional, Type, Union
+
+from typing import Any, Dict, Iterable, List, Optional, Type, Union
 from fsspec import AbstractFileSystem  # type: ignore
 
 from dlt.common.configuration import resolve_type
@@ -27,7 +28,11 @@ class FilesystemConfigurationResource(FilesystemConfiguration):
     @resolve_type("credentials")
     def resolve_credentials_type(self) -> Type[CredentialsConfiguration]:
         # use known credentials or empty credentials for unknown protocol
-        return Union[self.PROTOCOL_CREDENTIALS.get(self.protocol) or Optional[CredentialsConfiguration], AbstractFileSystem]  # type: ignore[return-value]
+        return Union[
+            self.PROTOCOL_CREDENTIALS.get(self.protocol)
+            or Optional[CredentialsConfiguration],
+            AbstractFileSystem,
+        ]  # type: ignore[return-value]
 
 
 def fsspec_from_resource(filesystem_instance: DltResource) -> AbstractFileSystem:
